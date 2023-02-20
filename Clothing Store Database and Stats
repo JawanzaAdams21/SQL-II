@@ -1,0 +1,34 @@
+--Create a clothing store database
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, price INTEGER, quantity INTEGER); 
+
+INSERT INTO clothing_store VALUES (1, "hoodies", 11, 19.99, 17);
+INSERT INTO clothing_store VALUES (2, "sweatpants", 22, 24.99, 24);
+INSERT INTO clothing_store VALUES (3, "socks", 3, 9.99, 55);
+INSERT INTO clothing_store VALUES (4, "long sleeve tshirts", 18, 14.99, 23);
+INSERT INTO clothing_store VALUES (5, "short sleeve tshirts", 18, 12.99, 37); 
+INSERT INTO clothing_store VALUES (6, "blankets", 4, 34.99, 45); 
+INSERT INTO clothing_store VALUES (7, "pillows", 7, 3.99, 59);
+INSERT INTO clothing_store VALUES (8, "jerseys", 1, 27.99, 6);
+INSERT INTO clothing_store VALUES (9, "beanies", 2, 11.99, 5);
+INSERT INTO clothing_store VALUES (10, "duffle bags", 15, 79.99, 33);
+INSERT INTO clothing_store VALUES (11, "comforters", 23, 99.99, 21); 
+INSERT INTO clothing_store VALUES (12, "washcloths", 9, 1.99, 13);
+INSERT INTO clothing_store VALUES (13, "peacoat", 0, 199.99, 14);
+INSERT INTO clothing_store VALUES (14, "towels", 22, 13.99, 20); 
+INSERT INTO clothing_store VALUES (15, "underwear", 10, 8.99, 31); 
+
+--display the database ordered by aisle.
+SELECT * FROM clothing_store
+ORDER BY aisle desc;
+
+--list the price of items by price. 
+SELECT * FROM clothing_store
+ORDER BY price asc; 
+
+
+--what 5 items do we have the most in inventory?
+SELECT item, quantity from clothing_store 
+ORDER BY quantity desc
+LIMIT 5;
+
